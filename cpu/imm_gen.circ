@@ -170,10 +170,10 @@ end TCL_Generic;
     <tool lib="1" name="NOR Gate"/>
     <sep/>
     <tool lib="4" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
+      <a name="appearance" val="classic"/>
     </tool>
     <tool lib="4" name="Register">
-      <a name="appearance" val="logisim_evolution"/>
+      <a name="appearance" val="classic"/>
     </tool>
   </toolbar>
   <circuit name="imm_gen">
@@ -205,7 +205,11 @@ end TCL_Generic;
       <a name="label" val="ImmSel"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(520,400)" name="Tunnel">
+    <comp lib="0" loc="(600,560)" name="Tunnel">
+      <a name="label" val="ImmSel"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(710,440)" name="Tunnel">
       <a name="label" val="imm"/>
       <a name="width" val="32"/>
     </comp>
@@ -220,6 +224,11 @@ end TCL_Generic;
       <a name="output" val="true"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="2" loc="(610,440)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="select" val="3"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="8" loc="(146,92)" name="Text">
       <a name="text" val="INPUTS to your circuit"/>
     </comp>
@@ -230,14 +239,42 @@ end TCL_Generic;
       <a name="text" val="OUTPUT from your circuit"/>
     </comp>
     <comp loc="(400,400)" name="I_imm"/>
+    <comp loc="(400,460)" name="S_imm"/>
+    <comp loc="(400,520)" name="SB_imm"/>
+    <comp loc="(400,580)" name="U_imm"/>
+    <comp loc="(400,640)" name="UJ_imm"/>
     <wire from="(1070,100)" to="(1070,220)"/>
-    <wire from="(120,400)" to="(180,400)"/>
+    <wire from="(120,400)" to="(150,400)"/>
+    <wire from="(150,400)" to="(150,460)"/>
+    <wire from="(150,400)" to="(180,400)"/>
+    <wire from="(150,460)" to="(150,520)"/>
+    <wire from="(150,460)" to="(180,460)"/>
+    <wire from="(150,520)" to="(150,580)"/>
+    <wire from="(150,520)" to="(180,520)"/>
+    <wire from="(150,580)" to="(150,640)"/>
+    <wire from="(150,580)" to="(180,580)"/>
+    <wire from="(150,640)" to="(180,640)"/>
     <wire from="(200,160)" to="(220,160)"/>
     <wire from="(200,230)" to="(220,230)"/>
     <wire from="(220,100)" to="(220,140)"/>
     <wire from="(220,180)" to="(220,210)"/>
     <wire from="(220,250)" to="(220,260)"/>
-    <wire from="(400,400)" to="(520,400)"/>
+    <wire from="(400,400)" to="(570,400)"/>
+    <wire from="(400,460)" to="(420,460)"/>
+    <wire from="(400,520)" to="(440,520)"/>
+    <wire from="(400,580)" to="(460,580)"/>
+    <wire from="(400,640)" to="(480,640)"/>
+    <wire from="(420,410)" to="(420,460)"/>
+    <wire from="(420,410)" to="(570,410)"/>
+    <wire from="(440,420)" to="(440,520)"/>
+    <wire from="(440,420)" to="(570,420)"/>
+    <wire from="(460,430)" to="(460,580)"/>
+    <wire from="(460,430)" to="(570,430)"/>
+    <wire from="(480,440)" to="(480,640)"/>
+    <wire from="(480,440)" to="(570,440)"/>
+    <wire from="(590,480)" to="(590,560)"/>
+    <wire from="(590,560)" to="(600,560)"/>
+    <wire from="(610,440)" to="(710,440)"/>
     <wire from="(70,100)" to="(220,100)"/>
     <wire from="(70,100)" to="(70,260)"/>
     <wire from="(70,260)" to="(220,260)"/>
@@ -334,5 +371,421 @@ end TCL_Generic;
     <wire from="(440,260)" to="(460,260)"/>
     <wire from="(480,190)" to="(480,240)"/>
     <wire from="(500,260)" to="(650,260)"/>
+  </circuit>
+  <circuit name="S_imm">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="S_imm"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(130,260)" name="Pin">
+      <a name="label" val="INST"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(210,260)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="none"/>
+      <a name="bit16" val="none"/>
+      <a name="bit17" val="none"/>
+      <a name="bit18" val="none"/>
+      <a name="bit19" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit20" val="none"/>
+      <a name="bit21" val="none"/>
+      <a name="bit22" val="none"/>
+      <a name="bit23" val="none"/>
+      <a name="bit24" val="none"/>
+      <a name="bit25" val="2"/>
+      <a name="bit26" val="2"/>
+      <a name="bit27" val="2"/>
+      <a name="bit28" val="2"/>
+      <a name="bit29" val="2"/>
+      <a name="bit3" val="none"/>
+      <a name="bit30" val="2"/>
+      <a name="bit31" val="3"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(350,250)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit10" val="2"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="2"/>
+      <a name="bit6" val="2"/>
+      <a name="bit7" val="2"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="11"/>
+    </comp>
+    <comp lib="0" loc="(500,260)" name="Bit Extender">
+      <a name="in_width" val="11"/>
+      <a name="out_width" val="32"/>
+      <a name="type" val="input"/>
+    </comp>
+    <comp lib="0" loc="(650,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="IMM"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(130,260)" to="(210,260)"/>
+    <wire from="(230,240)" to="(330,240)"/>
+    <wire from="(230,250)" to="(330,250)"/>
+    <wire from="(230,260)" to="(330,260)"/>
+    <wire from="(230,270)" to="(380,270)"/>
+    <wire from="(350,250)" to="(440,250)"/>
+    <wire from="(380,190)" to="(380,270)"/>
+    <wire from="(380,190)" to="(480,190)"/>
+    <wire from="(440,250)" to="(440,260)"/>
+    <wire from="(440,260)" to="(460,260)"/>
+    <wire from="(480,190)" to="(480,240)"/>
+    <wire from="(500,260)" to="(650,260)"/>
+  </circuit>
+  <circuit name="SB_imm">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="SB_imm"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(130,260)" name="Pin">
+      <a name="label" val="INST"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(210,260)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="none"/>
+      <a name="bit16" val="none"/>
+      <a name="bit17" val="none"/>
+      <a name="bit18" val="none"/>
+      <a name="bit19" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit20" val="none"/>
+      <a name="bit21" val="none"/>
+      <a name="bit22" val="none"/>
+      <a name="bit23" val="none"/>
+      <a name="bit24" val="none"/>
+      <a name="bit25" val="2"/>
+      <a name="bit26" val="2"/>
+      <a name="bit27" val="2"/>
+      <a name="bit28" val="2"/>
+      <a name="bit29" val="2"/>
+      <a name="bit3" val="none"/>
+      <a name="bit30" val="2"/>
+      <a name="bit31" val="3"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(300,200)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(350,250)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit10" val="2"/>
+      <a name="bit11" val="3"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="2"/>
+      <a name="bit6" val="2"/>
+      <a name="bit7" val="2"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="12"/>
+    </comp>
+    <comp lib="0" loc="(500,260)" name="Bit Extender">
+      <a name="in_width" val="12"/>
+      <a name="out_width" val="32"/>
+      <a name="type" val="input"/>
+    </comp>
+    <comp lib="0" loc="(650,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="IMM"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(130,260)" to="(210,260)"/>
+    <wire from="(230,220)" to="(230,240)"/>
+    <wire from="(230,220)" to="(300,220)"/>
+    <wire from="(230,250)" to="(270,250)"/>
+    <wire from="(230,260)" to="(280,260)"/>
+    <wire from="(230,270)" to="(380,270)"/>
+    <wire from="(270,240)" to="(270,250)"/>
+    <wire from="(270,240)" to="(330,240)"/>
+    <wire from="(280,250)" to="(280,260)"/>
+    <wire from="(280,250)" to="(330,250)"/>
+    <wire from="(300,200)" to="(330,200)"/>
+    <wire from="(300,220)" to="(300,260)"/>
+    <wire from="(300,260)" to="(330,260)"/>
+    <wire from="(330,200)" to="(330,230)"/>
+    <wire from="(350,250)" to="(440,250)"/>
+    <wire from="(380,190)" to="(380,270)"/>
+    <wire from="(380,190)" to="(480,190)"/>
+    <wire from="(440,250)" to="(440,260)"/>
+    <wire from="(440,260)" to="(460,260)"/>
+    <wire from="(480,190)" to="(480,240)"/>
+    <wire from="(500,260)" to="(650,260)"/>
+  </circuit>
+  <circuit name="U_imm">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="U_imm"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(130,260)" name="Pin">
+      <a name="label" val="INST"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(210,260)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
+      <a name="bit16" val="0"/>
+      <a name="bit17" val="0"/>
+      <a name="bit18" val="0"/>
+      <a name="bit19" val="0"/>
+      <a name="bit2" val="none"/>
+      <a name="bit20" val="1"/>
+      <a name="bit21" val="1"/>
+      <a name="bit22" val="1"/>
+      <a name="bit23" val="1"/>
+      <a name="bit24" val="1"/>
+      <a name="bit25" val="1"/>
+      <a name="bit26" val="1"/>
+      <a name="bit27" val="1"/>
+      <a name="bit28" val="1"/>
+      <a name="bit29" val="1"/>
+      <a name="bit3" val="none"/>
+      <a name="bit30" val="1"/>
+      <a name="bit31" val="2"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+      <a name="bit9" val="none"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(250,200)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="12"/>
+    </comp>
+    <comp lib="0" loc="(350,250)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit10" val="0"/>
+      <a name="bit11" val="0"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+      <a name="bit16" val="1"/>
+      <a name="bit17" val="1"/>
+      <a name="bit18" val="1"/>
+      <a name="bit19" val="1"/>
+      <a name="bit2" val="0"/>
+      <a name="bit20" val="2"/>
+      <a name="bit21" val="2"/>
+      <a name="bit22" val="2"/>
+      <a name="bit23" val="2"/>
+      <a name="bit24" val="2"/>
+      <a name="bit25" val="2"/>
+      <a name="bit26" val="2"/>
+      <a name="bit27" val="2"/>
+      <a name="bit28" val="2"/>
+      <a name="bit29" val="2"/>
+      <a name="bit3" val="0"/>
+      <a name="bit30" val="2"/>
+      <a name="bit31" val="3"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="0"/>
+      <a name="bit9" val="0"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(650,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="IMM"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(130,260)" to="(210,260)"/>
+    <wire from="(230,240)" to="(230,250)"/>
+    <wire from="(230,240)" to="(330,240)"/>
+    <wire from="(230,260)" to="(250,260)"/>
+    <wire from="(230,270)" to="(280,270)"/>
+    <wire from="(250,200)" to="(280,200)"/>
+    <wire from="(250,250)" to="(250,260)"/>
+    <wire from="(250,250)" to="(330,250)"/>
+    <wire from="(280,200)" to="(280,230)"/>
+    <wire from="(280,230)" to="(330,230)"/>
+    <wire from="(280,260)" to="(280,270)"/>
+    <wire from="(280,260)" to="(330,260)"/>
+    <wire from="(350,250)" to="(440,250)"/>
+    <wire from="(440,250)" to="(440,260)"/>
+    <wire from="(440,260)" to="(650,260)"/>
+  </circuit>
+  <circuit name="UJ_imm">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="UJ_imm"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(130,260)" name="Pin">
+      <a name="label" val="INST"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(210,260)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
+      <a name="bit16" val="0"/>
+      <a name="bit17" val="0"/>
+      <a name="bit18" val="0"/>
+      <a name="bit19" val="0"/>
+      <a name="bit2" val="none"/>
+      <a name="bit20" val="1"/>
+      <a name="bit21" val="2"/>
+      <a name="bit22" val="2"/>
+      <a name="bit23" val="2"/>
+      <a name="bit24" val="2"/>
+      <a name="bit25" val="3"/>
+      <a name="bit26" val="3"/>
+      <a name="bit27" val="3"/>
+      <a name="bit28" val="3"/>
+      <a name="bit29" val="3"/>
+      <a name="bit3" val="none"/>
+      <a name="bit30" val="3"/>
+      <a name="bit31" val="4"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+      <a name="bit9" val="none"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(390,200)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(440,250)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit10" val="2"/>
+      <a name="bit11" val="3"/>
+      <a name="bit12" val="4"/>
+      <a name="bit13" val="4"/>
+      <a name="bit14" val="4"/>
+      <a name="bit15" val="4"/>
+      <a name="bit16" val="4"/>
+      <a name="bit17" val="4"/>
+      <a name="bit18" val="4"/>
+      <a name="bit19" val="4"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="2"/>
+      <a name="bit6" val="2"/>
+      <a name="bit7" val="2"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="20"/>
+    </comp>
+    <comp lib="0" loc="(590,260)" name="Bit Extender">
+      <a name="in_width" val="20"/>
+      <a name="out_width" val="32"/>
+      <a name="type" val="input"/>
+    </comp>
+    <comp lib="0" loc="(740,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="IMM"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(130,260)" to="(210,260)"/>
+    <wire from="(230,240)" to="(260,240)"/>
+    <wire from="(230,250)" to="(270,250)"/>
+    <wire from="(230,260)" to="(280,260)"/>
+    <wire from="(230,270)" to="(290,270)"/>
+    <wire from="(230,280)" to="(510,280)"/>
+    <wire from="(260,220)" to="(260,240)"/>
+    <wire from="(260,220)" to="(370,220)"/>
+    <wire from="(270,230)" to="(270,250)"/>
+    <wire from="(270,230)" to="(400,230)"/>
+    <wire from="(280,240)" to="(280,260)"/>
+    <wire from="(280,240)" to="(420,240)"/>
+    <wire from="(290,250)" to="(290,270)"/>
+    <wire from="(290,250)" to="(420,250)"/>
+    <wire from="(370,220)" to="(370,270)"/>
+    <wire from="(370,270)" to="(420,270)"/>
+    <wire from="(390,200)" to="(420,200)"/>
+    <wire from="(400,230)" to="(400,260)"/>
+    <wire from="(400,260)" to="(420,260)"/>
+    <wire from="(420,200)" to="(420,230)"/>
+    <wire from="(440,250)" to="(530,250)"/>
+    <wire from="(510,190)" to="(510,280)"/>
+    <wire from="(510,190)" to="(570,190)"/>
+    <wire from="(530,250)" to="(530,260)"/>
+    <wire from="(530,260)" to="(550,260)"/>
+    <wire from="(570,190)" to="(570,240)"/>
+    <wire from="(590,260)" to="(740,260)"/>
   </circuit>
 </project>
