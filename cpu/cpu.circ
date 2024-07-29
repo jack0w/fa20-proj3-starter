@@ -176,10 +176,10 @@ end TCL_Generic;
     <tool lib="1" name="NOR Gate"/>
     <sep/>
     <tool lib="4" name="D Flip-Flop">
-      <a name="appearance" val="classic"/>
+      <a name="appearance" val="logisim_evolution"/>
     </tool>
     <tool lib="4" name="Register">
-      <a name="appearance" val="classic"/>
+      <a name="appearance" val="logisim_evolution"/>
     </tool>
   </toolbar>
   <circuit name="cpu">
@@ -294,6 +294,9 @@ end TCL_Generic;
       <a name="facing" val="north"/>
       <a name="label" val="t1"/>
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1150,1250)" name="Probe">
+      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(120,560)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -946,7 +949,7 @@ end TCL_Generic;
     <wire from="(1090,630)" to="(1090,650)"/>
     <wire from="(1090,650)" to="(1100,650)"/>
     <wire from="(1110,1210)" to="(1110,1240)"/>
-    <wire from="(1110,1210)" to="(1180,1210)"/>
+    <wire from="(1110,1210)" to="(1150,1210)"/>
     <wire from="(1120,1330)" to="(1120,1340)"/>
     <wire from="(1120,1330)" to="(1180,1330)"/>
     <wire from="(1130,810)" to="(1210,810)"/>
@@ -955,6 +958,8 @@ end TCL_Generic;
     <wire from="(1140,1350)" to="(1180,1350)"/>
     <wire from="(1140,1530)" to="(1140,1570)"/>
     <wire from="(1140,190)" to="(1140,220)"/>
+    <wire from="(1150,1210)" to="(1150,1250)"/>
+    <wire from="(1150,1210)" to="(1180,1210)"/>
     <wire from="(1150,830)" to="(1150,840)"/>
     <wire from="(1150,840)" to="(1210,840)"/>
     <wire from="(1160,1510)" to="(1220,1510)"/>
